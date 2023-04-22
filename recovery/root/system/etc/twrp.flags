@@ -1,7 +1,7 @@
 # Symlinked partitions
-/system_image	emmc		/dev/block/mapper/system						flags=backup=0;flashimg;display="System Image"
-/vendor_image	emmc		/dev/block/mapper/vendor						flags=backup=0;flashimg;display="Vendor Image"
-/product_image	emmc		/dev/block/mapper/product						flags=backup=0;flashimg;display="Product Image"
+/system_image	emmc		/dev/block/mapper/system						flags=backup=0;flashimg;display="System Image";wipeingui
+/vendor_image	emmc		/dev/block/mapper/vendor						flags=backup=0;flashimg;display="Vendor Image";wipeingui
+/product_image	emmc		/dev/block/mapper/product						flags=backup=0;flashimg;display="Product Image";wipeingui
 /odm_image		emmc		/dev/block/mapper/odm							flags=backup=0;flashimg;display="Odm Image"
 
 # Samsung ODE
@@ -59,7 +59,7 @@
 /prism_image	emmc	/dev/block/by-name/prism							flags=backup=1;display="Prism Image";flashimg=1
 /misc			emmc	/dev/block/by-name/misc								flags=backup=1;display="Misc"
 /up_param		emmc	/dev/block/by-name/up_param							flags=backup=1;display="Up_Param";flashimg=1
-/vbmeta_system	emmc	/dev/block/by-name/vbmeta							flags=backup=1;display="Vbmeta System";flashimg=1;
+/vbmeta_system	emmc	/dev/block/by-name/vbmeta							flags=backup=1;display="Vbmeta System";flashimg=1;wipeingui
 
 # External storage
 /external_sd	vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=display="External SD";storage;wipeingui;removable
