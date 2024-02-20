@@ -15,6 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/twrp_gta7litewifi.mk
+	$(LOCAL_DIR)/twrp_gta7lite.mk
 
-COMMON_LUNCH_CHOICES := twrp_gta7litewifi-eng
+COMMON_LUNCH_CHOICES := twrp_gta7lite-eng

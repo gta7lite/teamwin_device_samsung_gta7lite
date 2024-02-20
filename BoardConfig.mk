@@ -1,4 +1,4 @@
-DEVICE_PATH := device/samsung/gta7litewifi
+DEVICE_PATH := device/samsung/gta7lite
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Bootloader
