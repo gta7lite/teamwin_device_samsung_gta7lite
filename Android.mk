@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter gta7litewifi, $(TARGET_DEVICE)),)
+ifneq ($(filter gta7lite, $(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
