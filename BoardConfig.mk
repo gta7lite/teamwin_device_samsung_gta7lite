@@ -70,6 +70,9 @@ BOARD_MKBOOTIMG_ARGS := \
 
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
 
+# Kernel module loading
+TW_LOAD_VENDOR_MODULES := "fpsgo.ko"
+
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
