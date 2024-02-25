@@ -1,6 +1,4 @@
 ro.display.series=Samsung Tab A7 Lite
-ro.product.board=ot8
-ro.board.platform=mt6765
 sys.usb.controller=musb-hdrc
 ro.boot.dynamic_partitions=true
 ro.boot.boot_devices=bootdevice,soc/11230000.mmc,11230000.mmc
