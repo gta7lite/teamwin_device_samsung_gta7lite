@@ -26,13 +26,12 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #<src>                                    <mnt_point>    <type>    <mnt_flags and options>    <fs_mgr_flags>
-system                                               /system       ext4        ro,barrier=1,discard      avb=vbmeta_system,logical,first_stage_mount
+system                                               /system       ext4        ro,barrier=1,discard      avb=vbmeta,logical,first_stage_mount
 system_ext                                           /system_ext   ext4        ro,barrier=1,discard      avb=vbmeta_system,logical,first_stage_mount
 vendor                                               /vendor       ext4        ro,barrier=1,discard      avb,logical,first_stage_mount
 product                                              /product      ext4        ro,barrier=1,discard      avb,logical,first_stage_mount
 odm                                                  /odm          ext4        ro,barrier=1,discard      avb,logical,first_stage_mount
 
-/dev/block/platform/bootdevice/by-name/userdata	/data	f2fs	noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678
-/dev/block/platform/bootdevice/by-name/cache	/cache	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check,formattable
-/dev/block/platform/bootdevice/by-name/misc	/misc	emmc	defaults	defaults,first_stage_mount
+/dev/block/platform/bootdevice/by-name/userdata	/data	f2fs	noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678	wait,length=-16384
+/dev/block/platform/bootdevice/by-name/misc        /misc           emmc        defaults                  recoveryonly
 /dev/block/platform/bootdevice/by-name/md_udc	/metadata	ext4	defaults	wait,first_stage_mount
