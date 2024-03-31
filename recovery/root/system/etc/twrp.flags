@@ -1,10 +1,3 @@
-# Symlinked partitions
-/system_image		emmc		/dev/block/mapper/system						flags=backup=0;flashimg;display="System Image"
-/system_ext_image	emmc		/dev/block/mapper/system_ext						flags=backup=0;flashimg;display="System Ext Image"
-/vendor_image		emmc		/dev/block/mapper/vendor						flags=backup=0;flashimg;display="Vendor Image"
-/product_image		emmc		/dev/block/mapper/product						flags=backup=0;flashimg;display="Product Image"
-/odm_image		emmc		/dev/block/mapper/odm							flags=backup=0;flashimg;display="Odm Image"
-
 # Samsung ODE
 #/keydata	ext4		/dev/block/platform/bootdevice/by-name/keydata
 #/keyrefuge	ext4		/dev/block/platform/bootdevice/by-name/keyrefuge
@@ -34,7 +27,7 @@
 #Auto-generated code by FOTA Portal
 /gz1			emmc	/dev/block/by-name/gz1
 /optics			ext4	/dev/block/by-name/optics							flags=backup=1;display="Optics"
-/optics_image		emmc	/dev/block/by-name/optics							flags=backup=1;display="Optics Image";flashimg=1
+/optics_image	emmc	/dev/block/by-name/optics							flags=backup=1;display="Optics Image";flashimg=1
 /param			emmc	/dev/block/by-name/param							flags=backup=1;display="Param"
 /prism			ext4	/dev/block/by-name/prism							flags=backup=1;display="Prism"
 /vbmeta_samsung	emmc	/dev/block/by-name/vbmeta_samsung					flags=backup=1;display="Vbmeta Samsung";flashimg=1;
@@ -52,16 +45,16 @@
 /nvram			emmc		/dev/block/by-name/nvram							flags=backup=1;display="Non-volatile Ram (NVRAM)"
 /nvdata			ext4		/dev/block/by-name/nvdata							flags=backup=1;display="Non-volatile Data";subpartitionof=/nvram
 /nvcfg			ext4		/dev/block/by-name/nvcfg							flags=backup=1;display="Non-volatile Config";subpartitionof=/nvram
-/persis			emmc		/dev/block/platform/bootdevice/by-name/persist					flags=backup=1;display="Persist";subpartitionof=/nvram							flags=backup=1;display="NVCfg";
+/persistent		emmc		/dev/block/platform/bootdevice/by-name/persistent	flags=backup=1;display="Persistent";subpartitionof=/nvram							flags=backup=1;display="NVCfg";
 
 # Physical partitions - Backupable
 /boot			emmc	/dev/block/by-name/boot								flags=backup=1;display="Boot";flashimg=1
 /recovery		emmc	/dev/block/by-name/recovery							flags=backup=1;display="Recovery";flashimg=1
-/prism_image		emmc	/dev/block/by-name/prism							flags=backup=1;display="Prism Image";flashimg=1
+/prism_image	emmc	/dev/block/by-name/prism							flags=backup=1;display="Prism Image";flashimg=1
 /misc			emmc	/dev/block/by-name/misc								flags=backup=1;display="Misc"
 /up_param		emmc	/dev/block/by-name/up_param							flags=backup=1;display="Up_Param";flashimg=1
-/vbmeta_system		emmc	/dev/block/by-name/vbmeta							flags=backup=1;display="Vbmeta System";flashimg=1;
+/vbmeta_system	emmc	/dev/block/by-name/vbmeta							flags=backup=1;display="Vbmeta System";flashimg=1;
 
 # External storage
-/external_sd		vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=display="External SD";storage;wipeingui;removable
-/usb_otg		auto		/dev/block/sda1 	/dev/block/sda			flags=display="USB-OTG";storage;wipeingui;removable;
+/external_sd	vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=display="External SD";storage;wipeingui;removable
+/usb_otg		auto		/dev/block/sda1 		/dev/block/sda			flags=display="USB-OTG";storage;wipeingui;removable;
