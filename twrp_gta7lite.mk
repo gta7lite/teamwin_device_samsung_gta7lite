@@ -28,7 +28,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/gta7litewifi/device.mk)
+$(call inherit-product, device/samsung/gta7lite/device.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
